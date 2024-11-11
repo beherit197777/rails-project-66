@@ -45,6 +45,19 @@ gem 'aasm'
 gem 'kaminari'
 gem 'simple_form'
 gem 'pundit'
+gem 'faraday-retry'
+gem 'git'
+gem 'rails-i18n'
+gem 'rubocop'
+gem 'rubocop-performance'
+gem 'rubocop-rails'
+gem 'sentry-rails'
+gem 'sentry-ruby'
+gem 'slim_lint'
+gem 'stackprof'
+gem 'omniauth-rails_csrf_protection'
+
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -68,4 +81,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem 'minitest-power_assert'
+end
+
+group :production do
+  gem 'pg', '~> 1.5'
 end
