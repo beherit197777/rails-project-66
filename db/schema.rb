@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_11_134334) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["github_id"], name: "index_repositories_on_github_id", unique: true
     t.index ["user_id"], name: "index_repositories_on_user_id"
   end
 
@@ -35,13 +36,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_11_134334) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
+    t.string "email", null: false
     t.string "nickname"
     t.string "token"
-    t.string "name"
-    t.string "image_url"
+    t.string "provider"
+    t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "repositories", "users"

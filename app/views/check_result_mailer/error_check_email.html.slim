@@ -1,0 +1,4 @@
+h1 При проверке репозитория #{@repository.full_name} произошла ошибка
+
+p Необходимо обратиться к администратору
+= link_to 'Link', repository_check_url(@check.repository, @check)

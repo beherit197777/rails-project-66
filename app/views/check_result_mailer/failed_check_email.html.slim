@@ -1,0 +1,4 @@
+h1 При проверке репозитория #{@repository.full_name} не прошла
+
+p Поправьте замечания и запустить проверку повторно
+= link_to 'Link', repository_check_url(@check.repository, @check)

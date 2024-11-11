@@ -11,5 +11,7 @@ class CreateRepositories < ActiveRecord::Migration[7.2]
 
       t.timestamps
     end
+
+    add_index :repositories, :github_id, unique: true
   end
 end
