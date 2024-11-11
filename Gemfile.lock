@@ -107,6 +107,8 @@ GEM
       dotenv (= 3.1.4)
       railties (>= 6.1)
     drb (2.2.1)
+    enumerize (2.8.1)
+      activesupport (>= 3.2)
     erubi (1.13.0)
     faraday (2.12.0)
       faraday-net_http (>= 2.0, < 3.4)
@@ -163,6 +165,9 @@ GEM
     matrix (0.4.2)
     mini_mime (1.1.5)
     minitest (5.25.1)
+    minitest-power_assert (0.3.1)
+      minitest
+      power_assert (>= 1.1)
     msgpack (1.7.3)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
@@ -214,6 +219,7 @@ GEM
     parser (3.3.6.0)
       ast (~> 2.4.1)
       racc
+    power_assert (2.0.4)
     psych (5.2.0)
       stringio
     public_suffix (6.0.1)
@@ -397,8 +403,10 @@ DEPENDENCIES
   cssbundling-rails
   debug
   dotenv-rails
+  enumerize
   jbuilder
   jsbundling-rails
+  minitest-power_assert
   octokit
   omniauth
   omniauth-github
