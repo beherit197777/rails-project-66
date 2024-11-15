@@ -35,7 +35,7 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-gem 'sass-embedded', '~> 1.80'
+gem 'sass-embedded', '~> 1.81'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'octokit'
