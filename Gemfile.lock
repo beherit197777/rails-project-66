@@ -337,25 +337,25 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    sass-embedded (1.80.6-aarch64-linux-gnu)
+    sass-embedded (1.81.0-aarch64-linux-gnu)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-aarch64-linux-musl)
+    sass-embedded (1.81.0-aarch64-linux-musl)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-arm-linux-gnueabihf)
+    sass-embedded (1.81.0-arm-linux-gnueabihf)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-arm-linux-musleabihf)
+    sass-embedded (1.81.0-arm-linux-musleabihf)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-arm64-darwin)
+    sass-embedded (1.81.0-arm64-darwin)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-x86-linux-gnu)
+    sass-embedded (1.81.0-x86-linux-gnu)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-x86-linux-musl)
+    sass-embedded (1.81.0-x86-linux-musl)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-x86_64-darwin)
+    sass-embedded (1.81.0-x86_64-darwin)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-x86_64-linux-gnu)
+    sass-embedded (1.81.0-x86_64-linux-gnu)
       google-protobuf (~> 4.28)
-    sass-embedded (1.80.6-x86_64-linux-musl)
+    sass-embedded (1.81.0-x86_64-linux-musl)
       google-protobuf (~> 4.28)
     sawyer (0.9.2)
       addressable (>= 2.3.5)
@@ -478,7 +478,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rails-omakase
-  sass-embedded (~> 1.80)
+  sass-embedded (~> 1.81)
   selenium-webdriver
   sentry-rails
   sentry-ruby
