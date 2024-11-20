@@ -23,4 +23,13 @@ class Repository::Check < ApplicationRecord
       transitions from: :running, to: :failed
     end
   end
+
+  def passed?
+    status == 'completed'
+  end
+
+  def finished?
+    %w[completed failed].include?(status)
+  end
+
 end

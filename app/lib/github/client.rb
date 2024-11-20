@@ -18,9 +18,18 @@ class Github::Client
 
   def repos_collection
     repos = client.repositories
-    repos.map { |rep| [rep[:full_name], rep[:id]] }
+    # сюда нужно добавить rep[:language] и чтобы выводило только репозитории c ruby и javascript
+    filtered_repos = repos.select { |rep| %w[Ruby JavaScript].include?(rep[:language]) }
+    filtered_repos.map { |rep| [rep[:full_name], rep[:id], rep[:language]] }
 
-    # repos.each { |rep| ::Repository.create(github_id: rep[1], name: rep[0], user: @user) }
+    filtered_repos.each do |rep|
+      ::Repository.create(
+        github_id: rep[1],
+        name: rep[0],
+        language: rep[2],
+        user: @user
+      )
+    end
     repos
   end
 
@@ -63,7 +72,7 @@ class Github::Client
     {
       name: repository_data[:name],
       full_name: repository_data[:full_name],
-      language: repository_data[:language].downcase,
+      language: repository_data[:language]&.downcase,
       clone_url: repository_data[:clone_url],
       ssh_url: repository_data[:ssh_url]
     }

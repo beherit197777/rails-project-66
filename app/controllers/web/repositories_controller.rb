@@ -27,9 +27,8 @@ module Web
       @repository = current_user.repositories.build(repository_params)
 
       authorize @repository
-
-      if @repository.save
-        UpdateInfoRepositoryJob.perform_later(@repository.id)
+      if @repository.save!
+        UpdateInfoRepositoryJob.perform_now(@repository.id)
         redirect_to repositories_path, notice: t('.success')
       else
         Rails.logger.error "Failed to save repository: #{@repository.errors.full_messages.join(', ')}"
